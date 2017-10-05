@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta charset="utf-8">
+	<title>OVH</title>
+	<link rel="stylesheet" type="text/css" href="ovhCss.css">
+</head>
+<body>
+	<div class="div1" style="min-height: 530px;">
+		<div class="divLogo">
+			<img src="logo_ovh.png">
+		</div>
+		<div class="divText1">
+			<p>Se connecter</p>
+		</div>
+	<form>
+		<label for="nom" style="font-family: georgia; font-size: 1.03em; margin-left: 10px; color: #272822;">Nom d'utilisateur</label>
+		<br>
+		<input type="text" name="nom" id="nom" class="forme" autofocus>
+		<br>
+		<label for="motDePasse" style="font-family: georgia; font-size: 1.05em; margin-left: 10px; color: #272822;">Mot de passe</label>
+		<br>
+		<div style="display: flex;">
+			<input type="password" style="display: inline-block; width: 78%; margin-left: 10px; border-right: 0px; border-bottom-right-radius: 0px;  border-top-right-radius: 0px;" name="motDePasse" id="motDePasse" class="forme"><button id="b" style="margin-right: 12px; cursor: pointer;"><span><img src="eye.png"></span></button>
+		</div>
+		<br><br>
+		<div style="border-bottom: 1px solid rgb(220, 220, 214); margin-bottom: 15px;">
+			<label for="Remenber" style="display: inline-block; margin-left: 20px; margin-right: 20%; font-family: georgia; font-size: 0.8em; color: gray; cursor: pointer;">Remenber me</label>
+			<input type="checkbox" name="Remenber" id="Remenber" style="margin-bottom: 20px; cursor: pointer;">
+		</div>
+		<input type="submit" name="connecter" id="connecter" value="Se connecter" style="margin-left: 64%; cursor: pointer;">
+	</form>
+	</div>
+	<script type="text/javascript">
+		var bouton = document.getElementById('b');
+		bouton.onclick = function(e){
+			e.preventDefault();
+		}
+		bouton.onmousedown = function(e){
+			e.preventDefault();
+			var mot= document.getElementById('motDePasse');
+			mot.setAttribute('type', 'text');
+		}
+		bouton.onmouseup = function(e){
+			e.preventDefault();
+			var mot= document.getElementById('motDePasse');
+			mot.setAttribute('type', 'password');
+		}
+	</script>
+</body>
+</html>
